@@ -13,6 +13,9 @@ $query =
 file_get_contents("https://api.vk.com/method/newsfeed.search?q=Ребята,120000&count=2&access_token=".$token);
 $result = json_decode($query,true);
     print_r($result);
+/*foreach($result['response'] as $value){
+    echo $value['text'];
+}*/
     ?>
     
  
