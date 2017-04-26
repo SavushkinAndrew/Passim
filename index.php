@@ -8,8 +8,9 @@
 <body>
 
  <?php 
-   $_GET["q"] = str_replace(' ', '&shy;', $_GET["q"]);
-    if (isset($_GET["q"])) { $q=$_GET["q"];}
+   //$_GET["q"] = str_replace(' ', '&shy', $_GET["q"]);
+    if (isset($_GET["q"])) { $q=$_GET["q"];
+                        $q = str_replace(' ', '%20', $q);}
     if (isset($_GET["col"])) { $col=$_GET["col"];}
   ?>
   <form action="/"> 
@@ -20,6 +21,7 @@
   
    
     <?php
+
  $token =
 'ee61f01c22063654702253187733e60145f9b4d5ae986c727112a1ff093aeccd3e76b00f42612f6554793';
 $query = 
@@ -30,7 +32,7 @@ foreach($result['response'] as $value){
    // print_r($value);
     echo "
     <div class='wrapp'>
-      <a href=https://vk.com/wall".$value['owner_id']."_".$value['id']."><p>  ".$value['text']."</p>
+      <a href=https://vk.com/wall".$value['owner_id']."_".$value['id']."><p>  ".($value['text'])."</p></a>
       <br>
     </div>";
 }
