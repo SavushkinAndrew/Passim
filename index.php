@@ -27,9 +27,10 @@ file_get_contents("https://api.vk.com/method/newsfeed.search?q=".$q."&count=".$c
 $result = json_decode($query,true);
     
 foreach($result['response'] as $value){
+   // print_r($value);
     echo "
     <div class='wrapp'>
-      <p>  ".$value['text']."</p>
+      <a href=https://vk.com/wall".$value['owner_id']."_".$value['id']."><p>  ".$value['text']."</p>
       <br>
     </div>";
 }
