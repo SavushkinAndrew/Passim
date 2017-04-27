@@ -32,7 +32,7 @@ foreach($result['response'] as $value){
    // print_r($value);
     echo "
     <div class='wrapp'>
-      <a href=https://vk.com/wall".$value['owner_id']."_".$value['id']."><p>  ".($value['text'])."</p></a>
+      <a href=https://vk.com/wall".$value['owner_id']."_".$value['id']."><p>  ".$value['text']."</p></a>
       <br>
     </div>";
 }
