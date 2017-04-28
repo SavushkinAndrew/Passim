@@ -1,0 +1,46 @@
+h1{
+    text-align:  center;
+    font-family:fantasy;
+    color:red;
+    font-size: 250%;
+}
+
+
+
+.wrapper{
+      
+    
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+        
+}
+.header{
+    background-image: url(../img/logo.jpg);
+    min-height: 800px;
+    }
+.content{
+    background-color: #cccccc;
+overflow: auto;
+overflow-x: hidden // чтобы убрать горизонтальный скролл
+    
+    
+}
+.inform{
+    padding: 10px;
+}
+.box {
+    overflow: hidden;
+    height: 100px;
+    width: 300px;
+}
+.cc a{
+    color: #ffffff;
+}
+svg{
+        transform-origin: 50% 50% 0px;
+        width: 70px;
+    height: 60px;
+}
+
